@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在浏览器中使用atr-template</title>
+
+    <!-- 模板引擎不关心内容，智关心自己能认识的模板标记语法， 例如{{}}
+    
+        {{}}  语法被称之为 mustache 语法，八字胡语法
+    -->
+
+    <script src="./node_modules/art-template/lib/template-web.js"></script>
+
+    <!-- 这里的type不写text/script 就行 -->
+    <script type="text/template" id="tpl">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <p>大家好，我叫: {{name}}</p>
+            <p>我今年{{age}} 岁了</p>
+            我来自 {{province }}
+            我喜欢 {{each hobbies}} {{ $value }} {{ /each }}
+            
+        </body>
+        </html>
+    </script>
+
+    <script>
+        var ret = template('tpl', {
+            name: 'wwx',
+            age: 18,
+            province: 'china',
+            hobbies:[
+                'qw',
+                'ewew',
+                'weqwe'
+            ]
+        })
+
+        console.log(ret)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
