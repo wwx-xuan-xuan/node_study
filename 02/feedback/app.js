@@ -76,7 +76,7 @@ http
       var now = new Date();
       comment.dataTime = now.getFullYear()+'-'+now.getMonth()+'-'+now.getDate()
       console.log(comment)
-      comments.push(comment)
+      comments.unshift(comment)
 
       // 用户重新请求 / 首页  重定向  状态码  3开头的都是用来重定向的
       // 如何通过服务器让客户端重定向？
