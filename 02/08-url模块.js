@@ -18,7 +18,7 @@ var json_par = JSON.parse(json_str)
 console.log(json_par)
 
 
-// 使用querystring.parse代替url.parse
+// 使用querystring.parse代替url.parse 
 
 var querystring = require('querystring');
 url_querystring = 'http://127.0.0.1:3000/pinglun?name=asdasd&message=asdasdsa'
