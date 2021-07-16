@@ -1,0 +1,15 @@
+{
+  "name": "05-npm_package",
+  "version": "0.0.1",
+  "description": "测试项目",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wwx",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "jquery": "^3.6.0"
+  }
+}
