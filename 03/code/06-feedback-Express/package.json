@@ -1,0 +1,16 @@
+{
+  "name": "06-feedback-express",
+  "version": "1.0.0",
+  "description": "\u001b[D\u001b[C\u001b[尝试",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wwx",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "express": "^4.17.1",
+    "express-art-template": "^1.0.1"
+  }
+}
