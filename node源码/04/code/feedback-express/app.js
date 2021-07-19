@@ -2,7 +2,7 @@ var express = require('express')
 var bodyParser = require('body-parser')
 
 var app = express()
-
+ 
 app.use('/public/', express.static('./public/'))
 
 // 配置使用 art-template 模板引擎
