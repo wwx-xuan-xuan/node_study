@@ -47,7 +47,7 @@ http
           comments:comments
         })
 
-        res.end(ret)
+        res.end(ret) 
         // res.end(data)
       })
     } else if (pathname === '/post') {
