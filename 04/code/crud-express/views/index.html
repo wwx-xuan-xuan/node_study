@@ -90,7 +90,7 @@
           </div>
 
           <h2 class="sub-header">Section title</h2>
-          <a class='btn btn-success'>添加学生</a>
+          <a class='btn btn-success' href="/students/new">添加学生</a>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -99,6 +99,7 @@
                   <th>name</th>
                   <th>gender</th>
                   <th>age</th>
+                  <th>hobbies</th>
                 </tr>
               </thead>
               <tbody>
@@ -108,6 +109,7 @@
                     <td>{{$value.name}}</td>
                     <td>{{$value.gender}}</td>
                     <td>{{$value.age}}</td>
+                    <td>{{$value.hobbies}}</td>
                   </tr>
                 {{ /each}}
                 <tr>

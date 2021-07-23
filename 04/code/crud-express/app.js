@@ -23,6 +23,7 @@ app.engine('html', require('express-art-template'))
 
 app.use('/node_modules/', express.static('./node_modules/'))
 app.use('/public/', express.static('./public/'))
+app.use(express.urlencoded({ extended: false }))
 
 // 把路由容器挂载到路由容器中
 app.use(router)

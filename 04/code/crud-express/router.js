@@ -20,7 +20,7 @@ const router = express.Router();
 // 2，把路由挂载到router路由容器中
 
 
-router.get('/', function(req, res){
+router.get('/students/', function(req, res){
     // res.send('hello word')
 
     // readFile的第二个参数是可选的，传入utf8就是告诉他把读取到的文件直接按照utf8编码的方式转为我们看得懂的字符
@@ -45,23 +45,24 @@ router.get('/', function(req, res){
     })
 })
 
-router.get('/students', function(req, res){
-
+router.get('/students/new', function(req, res){ 
+    res.render('new.html')
 })
 
-router.get('/students/new', function(req, res){
+router.post('/students/new', function(req, res){
+    // 1.获取表单数据
+    console.log(req.body)
+    // 2.处理
+    // 3.发送响应
 
 })
-router.get('/students/new', function(req, res){
+router.get('/students/edit', function(req, res){
 
 })
-router.get('/students/new', function(req, res){
+router.post('/students/edit', function(req, res){
 
 })
-router.get('/students/new', function(req, res){
-
-})
-router.get('/students/new', function(req, res){
+router.get('/students/delete', function(req, res){
 
 })
 
