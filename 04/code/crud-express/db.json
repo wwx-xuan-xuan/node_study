@@ -1,12 +1,1 @@
-{
-    "students":[
-        {"id":1, "name":"张三", "gender": 0, "age":18, "hobbies":"跑步"},
-        {"id":2, "name":"张三", "gender": 0, "age":18, "hobbies":"跑步"},
-        {"id":3, "name":"张三", "gender": 0, "age":18, "hobbies":"跑步"},
-        {"id":4, "name":"张三", "gender": 0, "age":18, "hobbies":"跑步"},
-        {"id":5, "name":"张三", "gender": 0, "age":18, "hobbies":"跑步"},
-        {"id":6, "name":"张三", "gender": 0, "age":18, "hobbies":"跑步"},
-        {"id":7, "name":"张三", "gender": 0, "age":18, "hobbies":"跑步"},
-        {"id":8, "name":"张三", "gender": 0, "age":18, "hobbies":"跑步"}
-    ]
-}
+{"students":[{"id":"1","name":"我问下","gender":"1","age":"-1","hobbies":"sdfsdfsdf"},{"id":"2","name":"123","gender":"0","age":"123","hobbies":"sdfsdfsdfsdfs阿三大苏打士大夫士大夫士大夫士大夫"},{"id":3,"name":"张三","gender":0,"age":18,"hobbies":"跑步"},{"id":4,"name":"张三","gender":0,"age":18,"hobbies":"跑步"},{"id":5,"name":"张三","gender":0,"age":18,"hobbies":"跑步"},{"id":6,"name":"张三","gender":0,"age":18,"hobbies":"跑步"},{"id":7,"name":"张三","gender":0,"age":18,"hobbies":"跑步"},{"id":8,"name":"张三","gender":0,"age":18,"hobbies":"跑步"},{"id":9,"name":"撒旦发射点发射点","gender":"0","age":"2","hobbies":"sdfsdfsdfsdfs"},{"id":10,"name":"撒旦发射点发射点","gender":"0","age":"2","hobbies":"sdfsdfsdfsdfs"},{"id":11,"name":"撒旦发射点发射点","gender":"0","age":"2","hobbies":"sdfsdfsdfsdfs"},{"id":12,"name":"撒旦发射点发射点","gender":"0","age":"2","hobbies":"sdfsdfsdfsdfs"},{"id":13,"name":"阿三大苏打大苏打的","gender":"1","age":"-1","hobbies":"sdfsdfsdfsdfs阿三大苏打"},{"id":14,"name":"士大夫士大夫士大夫士大夫","gender":"0","age":"4","hobbies":"sdfsdfsdfsdfs阿三大苏打士大夫士大夫士大夫士大夫"}]}

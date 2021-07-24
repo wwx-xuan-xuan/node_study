@@ -79,14 +79,17 @@
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <form action="/students/new" method="POST">
-                    <h1>添加学生</h1>
-                    <div class="form-group">
+
+                    <h1>修改学生信息</h1>
+
+
+                    <!-- <div class="form-group">
                         <label for="">id</label>
                         <input type="number" class="form-control" name="id" id="" placeholder="id">
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <label for="">姓名</label>
-                        <input type="text" class="form-control" name="name" id="" placeholder="name">
+                        <input type="text" class="form-control" name="name" id="" value="{{student.name}}" placeholder="name">
                     </div>
 
 
@@ -104,12 +107,12 @@
                     <br>
                     <div class="form-group">
                         <label for="">年龄</label>
-                        <input type="number" class="form-control" name="age" id="" placeholder="age">
+                        <input type="number" class="form-control" name="age" value="{{student.age}}" id="" placeholder="age">
                     </div>
 
                     <div class="form-group">
                         <label for="">爱好</label>
-                        <input type="text" class="form-control" name="hobbies" id="" placeholder="hobbies">
+                        <input type="text" class="form-control" name="hobbies" value="{{student.hobbies}}" id="" placeholder="hobbies">
                     </div>
 
 
