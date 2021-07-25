@@ -78,7 +78,7 @@
                 </ul>
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <form action="/students/new" method="POST">
+                <form action="/students/edit" method="POST">
 
                     <h1>修改学生信息</h1>
 
@@ -87,6 +87,11 @@
                         <label for="">id</label>
                         <input type="number" class="form-control" name="id" id="" placeholder="id">
                     </div> -->
+
+                    <!-- 隐藏域 -->
+                    <!-- 用来放一些不希望被用户看见， 但是需要被提交到服务端的数据 -->
+                    <input type="hidden" value='{{student.id}}' name="id">
+
                     <div class="form-group">
                         <label for="">姓名</label>
                         <input type="text" class="form-control" name="name" id="" value="{{student.name}}" placeholder="name">
