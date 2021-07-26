@@ -107,7 +107,7 @@ router.get('/students/edit', function (req, res) {
 
 // 处理编辑学生
 router.post('/students/edit', function (req, res) {
-    Student.updateById(req.body, function (err) {
+    Student.updateById(req.body, function (err) { 
         if (err) {
             return res.status(500).send('Sever error')
         }
