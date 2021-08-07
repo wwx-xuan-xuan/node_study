@@ -4,7 +4,7 @@ const {
 } = require('mongoose');
 
 // 连接数据库
-mongoose.connect('mongodb://localhost:27017/demo2');
+mongoose.connect('mongodb://localhost:27017/demo2',{useNewUrlParser: true});
 
 // 设计集合结构
 // 字段名称就是表结构中的属性名称
@@ -42,13 +42,14 @@ var admin = new User({
     email: 'admin@admin.com'
 })
 
-// admin.save(function(err, ret){
-//     if(err){
-//         console.log('存储失败')
-//     }
-//     console.log('成功');
-//     console.log(ret);
-// })
+// 保存数据
+admin.save(function(err, ret){
+    if(err){
+        console.log('存储失败')
+    }
+    console.log('成功');
+    console.log(ret);
+})
 
 // 查询数据
 User.find({
@@ -59,7 +60,7 @@ User.find({
     }
     console.log(ret)
 })
-
+ 
 
 // 更新数据
 User.findByIdAndUpdate('610d33518fea984250797ce6',{

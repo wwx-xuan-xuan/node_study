@@ -74,14 +74,23 @@ router.post('/students/new', function (req, res) {
 
     // 2.处理
 
-    Student.save(req.body, function (err) {
-        if (err) {
-            return res.status(500).send('Sever error')
-        }
+    new Student(req.body).save(function (err) {
+            if (err) {
+                return res.status(500).send('Sever error')
+            }
+    
+            // 3.发送响应
+            res.redirect('/students')
+        })
+    // Student.save(req.body, function (err) {
+    //     if (err) {
+    //         return res.status(500).send('Sever error')
+    //     }
 
-        // 3.发送响应
-        res.redirect('/students')
-    })
+    //     // 3.发送响应
+    //     res.redirect('/students')
+    // })
+
     // Student.update(req.body, function (err) {
     //     if (err) {
     //         return res.status(500).send('Sever error')
@@ -93,8 +102,8 @@ router.post('/students/new', function (req, res) {
 
 })
 router.get('/students/edit', function (req, res) {
-    console.log(parseInt(req.query.id))
-    Student.findById(parseInt(req.query.id), function(err, student){
+    // console.log(parseInt(req.query.id))
+    Student.findById(req.query.id.replace(/"/g, ''), function(err, student){
         if(err){
             return res.status(500).send('Sever error')
         }
@@ -107,7 +116,7 @@ router.get('/students/edit', function (req, res) {
 
 // 处理编辑学生
 router.post('/students/edit', function (req, res) {
-    Student.updateById(req.body, function (err) {  
+    Student.findByIdAndUpdate(req.body.id.replace(/"/g,""),req.body, function (err) {  
         if (err) {
             return res.status(500).send('Sever error')
         }
@@ -117,7 +126,14 @@ router.post('/students/edit', function (req, res) {
     }) 
 })
 router.get('/students/delete', function (req, res) {
+    Student.findByIdAndRemove(req.query.id.replace(/"/g,""), function (err) {  
+        if (err) {
+            return res.status(500).send('Sever error')
+        }
 
+        // 3.发送响应
+        res.redirect('/students') 
+    }) 
 })
 
 
