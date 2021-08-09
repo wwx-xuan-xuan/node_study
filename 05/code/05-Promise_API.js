@@ -23,4 +23,49 @@ var p1 = new Promise(function (resolve, reject) {
     })
 })
 
-console.log(4)
+var p2 = new Promise(function (resolve, reject) {
+    fs.readFile('./data/b.txt', 'utf-8', function (err, data) {
+        if (err) {
+            reject(err)
+        } else {
+            resolve(data)
+        }
+    })
+})
+
+var p3 = new Promise(function (resolve, reject) {
+    fs.readFile('./data/c.txt', 'utf-8', function (err, data) {
+        if (err) {
+            reject(err)
+        } else {
+            resolve(data)
+        }
+    })
+})
+
+
+
+p1
+    .then(function (data) {
+        console.log(data);
+
+        /**
+         * 当p1读取成功的时候
+         * 当前函数中return的结果就可以在后面的then中 function 接收到
+         * 
+         * 我们可以return一个Promise对象
+         * 当 return一个Promise对象的时候， 后续的then中方法的第一个参数 会作为p2的 resolve
+         * 
+         */
+
+        return p2
+    }, function (err) {
+        console.log('文件读取失败', err)
+    })
+    .then(function (data) {
+        console.log(data);
+        return p3
+    })
+    .then(function (data) {
+        console.log(data)
+    })
