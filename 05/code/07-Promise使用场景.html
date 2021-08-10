@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise使用场景</title>
+</head>
+
+<body>
+    <form action="" id="user_form">
+
+    </form>
+
+    <script type="text/template" id="tpl">
+
+        <div>
+            <label for="">用户名</label>
+            <input type="text" name="" id="" value="{{user.username}}">
+        </div>
+
+        <div>
+            <label for="">年龄</label>
+            <input type="text" value="{{user.age}}">
+        </div>
+
+        <div>
+            <label for="">职业</label>
+            <select name="" id="">
+                {{ each jobs }}
+                    {{ if user.job === $value.id }}
+                        <option value="{{ $value.id }}" selected>{{ $value.name }}</option>
+                    {{ else }}
+                    <option value="{{ $value.id }}">{{ $value.name }}</option>
+
+                    {{ /if }}
+
+
+                {{ /each }}
+            </select>
+        </div>
+    </script>
+    <script src="node_modules/art-template/lib/template-web.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+    <script>
+        // get('http://127.0.0.1:3000/users/3', function (usersData) {
+        //     get('http://127.0.0.1:3000/jobs', function (jobsData) {
+        //         data = JSON.parse(usersData)
+        //         jobs = JSON.parse(jobsData)
+
+        //         var htmlSrc = template('tpl', {
+        //             user: data,
+        //             jobs: jobs
+        //         })
+        //         console.log(htmlSrc)
+
+        //         // 添加到表单
+        //         document.querySelector('#user_form').innerHTML = htmlSrc
+        //     })
+        // })
+
+        var data = {}
+        $.get('http://127.0.0.1:3000/users/3')
+            .then(function (usersData) {
+                data.user = usersData;
+                return $.get('http://127.0.0.1:3000/jobs')
+            })
+            .then(function (jobsData) {
+                data.jobs = jobsData
+                var htmlSrc = template('tpl', data)
+
+                // 添加到表单
+                document.querySelector('#user_form').innerHTML = htmlSrc
+            })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function get(url, callback) {
+            var oReq = new XMLHttpRequest();
+            // 当请求加载成功后调用指定的函数
+            oReq.onload = function () {
+                // 我们现在需要的到这里的oReq.responseText
+                callback(oReq.responseText)
+            }
+            oReq.open('get', url, true);
+            oReq.send()
+        }
+    </script>
+
+</body>
+
+</html>
