@@ -18,7 +18,7 @@ console.log(add(10, 20));
 function add(x, y, callback) {
   // callback就是回调函数
   // var x = 10; 
-  // var y = 20; 
+  // var y = 20;  
   // var callback = function (ret) { console.log(ret) };
 
   setTimeout(function () {
