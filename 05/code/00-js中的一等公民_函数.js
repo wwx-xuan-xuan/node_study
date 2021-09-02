@@ -13,7 +13,7 @@ function add(x, y) {
 
 
 console.log(add(10, 20));
-
+ 
 
 function add(x, y, callback) {
   // callback就是回调函数
