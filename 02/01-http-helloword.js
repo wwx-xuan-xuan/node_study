@@ -8,7 +8,7 @@ var server = http.createServer();
 // 监听server的request请求
 
 var wwwDir = 'D:/workspace/大二下学期/node_study/www'
-
+ 
 server.on('request', function (req, res) {
     var url = req.url;
     console.log(url)
