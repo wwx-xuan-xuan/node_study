@@ -12,7 +12,7 @@ var wwwDir = 'D:/workspace/大二下学期/node_study/www'
 server.on('request', function (req, res) {
     var url = req.url;
     console.log(url)
-
+ 
 
     if(url === '/'){
         fs.readFile(wwwDir + '/index.html', function(err, data){
