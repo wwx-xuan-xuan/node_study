@@ -28,7 +28,7 @@ server.on('request', function (req, res) {
                 return res.end('404 NOT FOUND')
             }
 
-            res.end(data)
+            res.end(data) 
         })
     }else if(url === '/apple/login.html'){
         fs.readFile(wwwDir + '/apple/login.html', function(err, data){
