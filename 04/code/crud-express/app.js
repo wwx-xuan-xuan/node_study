@@ -7,7 +7,7 @@
  *     body-parser 解析表单 post 请求体
  *     提供静态资源服务 
  *   挂载路由
- *   监听端口启动服务
+ *   监听端口启动服务 
  */
 
 const express = require('express');
